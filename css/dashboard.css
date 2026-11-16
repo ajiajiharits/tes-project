@@ -1,0 +1,315 @@
+body.dashboard-page {
+  margin: 0;
+  background: #f4f7f6;
+  font-family: var(--default-font);
+}
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #37423b;
+  padding: 25px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-brand {
+  margin-bottom: 35px;
+}
+
+.sidebar-brand a {
+  color: #5fcf80;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sidebar-brand span {
+  display: block;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-menu a {
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background: #5fcf80;
+  color: #fff;
+}
+
+.logout-link {
+  margin-top: 25px;
+  background: rgba(220, 53, 69, 0.15);
+}
+
+.dashboard-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  padding: 30px;
+}
+
+.dashboard-topbar,
+.welcome-card,
+.stat-card,
+.dashboard-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+.dashboard-topbar {
+  padding: 22px 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-topbar h1 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.dashboard-topbar p {
+  margin: 5px 0 0;
+  color: #777;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.user-info span {
+  display: block;
+  font-size: 13px;
+  color: #777;
+}
+
+.welcome-card {
+  padding: 30px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-label {
+  color: #5fcf80;
+  font-weight: 600;
+}
+
+.welcome-card h2 {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.welcome-button {
+  background: #5fcf80;
+  color: #fff;
+  padding: 11px 20px;
+  border-radius: 50px;
+}
+
+.stat-card {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon i {
+  font-size: 26px;
+}
+
+.stat-icon.green {
+  background: rgba(95, 207, 128, 0.15);
+  color: #5fcf80;
+}
+
+.stat-icon.blue {
+  background: rgba(13, 110, 253, 0.15);
+  color: #0d6efd;
+}
+
+.stat-icon.orange {
+  background: rgba(255, 193, 7, 0.2);
+  color: #f0ad00;
+}
+
+.stat-icon.purple {
+  background: rgba(111, 66, 193, 0.15);
+  color: #6f42c1;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #777;
+}
+
+.dashboard-card {
+  padding: 25px;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-heading h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card-heading p {
+  color: #777;
+  margin: 0;
+}
+
+.dashboard-progress {
+  height: 10px;
+}
+
+.dashboard-progress .progress-bar {
+  background: #5fcf80;
+}
+
+.schedule-item,
+.certificate-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.schedule-date {
+  min-width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  background: rgba(95, 207, 128, 0.15);
+  color: #5fcf80;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.schedule-date strong,
+.schedule-date span {
+  display: block;
+}
+
+.schedule-item h4,
+.certificate-item h4 {
+  font-size: 17px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.schedule-item p,
+.certificate-item p {
+  margin: 4px 0 0;
+  color: #777;
+}
+
+.certificate-item i {
+  font-size: 32px;
+  color: #5fcf80;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-list li {
+  margin-bottom: 15px;
+}
+
+.activity-list i {
+  color: #5fcf80;
+  margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-sidebar {
+    position: fixed;
+    left: -260px;
+    z-index: 999;
+    transition: 0.3s;
+  }
+
+  .dashboard-sidebar.active {
+    left: 0;
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .dashboard-topbar,
+  .welcome-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
