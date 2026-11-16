@@ -1,0 +1,59 @@
+<?php
+session_start();
+include 'config.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<?php include 'includes/head.php'; ?>
+</head>
+<body>
+
+<?php include 'includes/navbar.php'; ?>
+
+<section class="hero">
+  <div class="container text-center text-white">
+    <h1>Sewa Mobil Premium</h1>
+    <p>Harga terbaik dan pelayanan profesional</p>
+    <a href="cars.php" class="btn btn-danger">Lihat Mobil</a>
+  </div>
+</section>
+
+<section class="container mt-5">
+
+<div class="row">
+
+<?php
+$query = mysqli_query($conn, "SELECT * FROM mobil LIMIT 6");
+
+while($data = mysqli_fetch_assoc($query)) :
+?>
+
+<div class="col-md-4 mb-4">
+
+<div class="card car-card">
+
+<img src="uploads/mobil/<?php echo $data['gambar']; ?>" class="card-img-top">
+
+<div class="card-body">
+
+<h5><?php echo $data['nama_mobil']; ?></h5>
+
+<p>Rp <?php echo number_format($data['harga_per_hari']); ?>/hari</p>
+
+<a href="detail.php?id=<?php echo $data['id']; ?>" class="btn btn-dark w-100">Detail</a>
+
+</div>
+</div>
+</div>
+
+<?php endwhile; ?>
+
+</div>
+</section>
+
+<?php include 'includes/footer.php'; ?>
+
+</body>
+</html>
